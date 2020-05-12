@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="row" >
+  <div class="row">
     
     <div class="col-8" style="background-color: #A4B99C;">
 
@@ -8,7 +8,7 @@
     <div class="col-4">
       <div class="pt-4 px-5 text-center">
         <p id="heading">Retro</p>
-        <p style="font-size: 1.5rem;">Sign in</p>
+        <p style="font-size: 1.5rem;">{{ isCreate ? 'Sign up' : 'Sign in' }}</p>
 
         <form>
           <div class="md-form">
@@ -24,22 +24,29 @@
           </div>
 
           <div class="d-flex justify-content-end">
-              <a href="" class="small-grey-label">Forgot password?</a>
+              <a href="" class="small-grey-label" [hidden]="isCreate">Forgot password?</a>
           </div>
 
-          <button mdbBtn mdbWavesEffect color="dark" class="btn-rounded" >Sign In</button>        
+          <button mdbBtn mdbWavesEffect color="dark" class="btn-rounded">
+            {{ isCreate ? 'Sign up' : 'Sign in' }}
+          </button>        
         </form>
 
         <p class="separator">or</p>
 
         <a type="button" class="mx-2 mb-5 text-info font-weight-bold">
-          <fa-icon [icon]="faMicrosoft" class="fa-lg"></fa-icon> Sign in with Microsoft
+          <fa-icon [icon]="faMicrosoft" class="fa-lg"></fa-icon>
+          {{ isCreate ? 'Sign up with Microsoft' : 'Sign in with Microsoft' }}
         </a>
-        <p>New to Retro?<a type="button" class="mx-1 bold-ul">Create Account</a></p>
-
+        
+        <p>
+          {{ isCreate ? 'Already a User?' : 'New to Retro?' }}
+          <a type="button" class="mx-1 bold-ul" (click)="this.isCreate = !this.isCreate">
+            {{ isCreate ? 'Sign In' : 'Create Account' }} 
+          </a>
+        </p>
       </div>
+    </div>  
 
-    </div>
-  
   </div>
 </div>
