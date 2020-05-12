@@ -1,0 +1,41 @@
+#heading{
+    font-family: 'Pacifico', cursive;
+    font-size: 1.9rem;
+    padding-bottom: 3rem;
+}
+.small-grey-label{
+    color: grey;
+    font-size: 0.84rem;
+}
+.separator {
+    display: flex;
+    align-items: center;
+    color: darkgrey;
+    font-size: 0.9rem;
+    padding: 2rem;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid lightgrey;
+}
+.separator::before {
+    margin-right: .45em;
+}
+.separator::after {
+    margin-left: .45em;
+}
+.fawesome-align{
+    font-size: 1.1rem;
+    left: 0.50rem;
+    top: 0.75rem;
+}
+.bold-ul{
+    text-decoration: underline !important;
+    text-underline-position: under;
+    text-decoration-color: grey !important;
+    font-size: 0.95rem;
+}
+.btn-rounded {
+    border-radius: 10em;
+}

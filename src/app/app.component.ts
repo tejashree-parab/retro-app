@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+import { faMicrosoft } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'retro-app';
+  faEnvelope = faEnvelope;
+  faLock = faLock;
+  faMicrosoft = faMicrosoft;
 }
